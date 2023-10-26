@@ -143,7 +143,7 @@ class CustomerService:
         query = select(RecipeBD.id, RecipeBD.title
                        ).join(ListIngridientBD
                               ).join(IngridientBD
-                                     ).where(IngridientBD.title == body.capitalize()
+                                     ).where(IngridientBD.title.like(f'%{body.capitalize()}%')
                                              ).limit(limit)
         async with self.session.begin():
             rezult = await self.session.execute(query)

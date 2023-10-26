@@ -1,0 +1,12 @@
+__pycache__
+Include
+share
+Lib
+Scripts
+*.csv
+*.ipynb
+*.db
+*.7z
+*.zip
+pyvenv.cfg
+.vscode

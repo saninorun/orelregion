@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pydantic_settings
+sqlalchemy == 2
+asyncpg
+httpx
+alembic == 1.12
+gunicorn == 21.2.0
+psycopg2-binary

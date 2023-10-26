@@ -5,7 +5,7 @@ from pydantic import BaseModel, ConfigDict, constr, conint, validator, confloat
 from fastapi import HTTPException, status
 
 
-LETTER_MATCH_PATTERN = re.compile(r'^[а-яА-Яa-zA-Z\- ,]+$')
+LETTER_MATCH_PATTERN = re.compile(r'^[а-яА-Яa-zA-Z0-9Ёё\- ,.?()/!—]+$')
 ERROR_INPUT_USER = HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail='Ошибка! Требуется использовать только алфавитные символы!'
